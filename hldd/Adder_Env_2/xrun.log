@@ -1,0 +1,65 @@
+xrun(64): 20.09-s012: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s012: Started on Oct 20, 2023 at 09:36:14 IST
+xrun
+	+access+rwc
+	top.sv
+	adder.sv
+Recompiling... reason: file './top.sv' is newer than expected.
+	expected: Fri Oct 20 09:23:13 2023
+	actual:   Fri Oct 20 09:35:40 2023
+file: top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x666b7cdf
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top:sv <0x006013d9>
+			streams:   3, words:  1885
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                    2       2
+		Interfaces:                 1       1
+		Registers:                 38      51
+		Vectored wires:             1       -
+		Initial blocks:             3       3
+		Cont. assignments:          1       1
+		Assertions:                 1       1
+		Compilation units:          1       1
+		SV Class declarations:      6       6
+		SV Class specializations:   6       6
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/installs/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+                   0ns [GEN] : A =  4, B =  1
+                   0ns [DRV] : A =  4, B =  1
+                   1ns [MON] : A =  4, B =  1, Sum =  5
+                   1ns [SCB] : PASS : A =  4, B =  1, Sum =  5
+                   1ns [GEN] : A =  9, B =  3
+                   1ns [DRV] : A =  9, B =  3
+                   2ns [MON] : A =  9, B =  3, Sum = 12
+                   2ns [SCB] : PASS : A =  9, B =  3, Sum = 12
+                   2ns [GEN] : A = 13, B = 13
+                   2ns [DRV] : A = 13, B = 13
+                   3ns [MON] : A = 13, B = 13, Sum = 26
+                   3ns [SCB] : PASS : A = 13, B = 13, Sum = 26
+                   3ns [GEN] : A =  5, B =  2
+                   3ns [DRV] : A =  5, B =  2
+                   4ns [MON] : A =  5, B =  2, Sum =  7
+                   4ns [SCB] : PASS : A =  5, B =  2, Sum =  7
+                   4ns [GEN] : A =  1, B = 13
+                   4ns [DRV] : A =  1, B = 13
+                   5ns [MON] : A =  1, B = 13, Sum = 14
+                   5ns [SCB] : PASS : A =  1, B = 13, Sum = 14
+Simulation complete via $finish(1) at time 15 NS + 0
+./top.sv:24     #10 $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s012: Exiting on Oct 20, 2023 at 09:36:16 IST  (total: 00:00:02)
